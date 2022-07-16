@@ -10,6 +10,13 @@ spec:
   - host: blog.com
     http:
       paths:
+        - path: "/events"
+          pathType: Prefix
+          backend:
+            service:
+              name: event-bus-srv
+              port: 
+                number: 3330
         - path: "/posts/create"
           pathType: Prefix
           backend:
@@ -17,7 +24,7 @@ spec:
               name: posts-srv
               port: 
                 number: 3331
-        - path: "/comments"
+        - path: "/posts/?(.*)/comments"
           pathType: Prefix
           backend:
             service:
