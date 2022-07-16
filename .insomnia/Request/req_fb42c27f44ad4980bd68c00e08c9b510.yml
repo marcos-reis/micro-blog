@@ -1,0 +1,29 @@
+_id: req_fb42c27f44ad4980bd68c00e08c9b510
+type: Request
+parentId: fld_70060a887abe4d42b5f7f925d1ece236
+modified: 1657991877673
+created: 1657991815212
+url: "{{EndPoint}}/posts/af499d44-536e-4212-b87d-e9372ce5d66b/comments"
+name: Create Comment by Post
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"content":"First Comment"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_cef8015e6757430a98156e2757fccd05
+authentication: {}
+metaSortKey: -1657940954793.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

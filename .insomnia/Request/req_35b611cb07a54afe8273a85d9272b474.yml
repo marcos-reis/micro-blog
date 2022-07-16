@@ -1,0 +1,29 @@
+_id: req_35b611cb07a54afe8273a85d9272b474
+type: Request
+parentId: fld_71ae510d02494b49bc3aeaafbc0b9442
+modified: 1657991922285
+created: 1657987093227
+url: "{{EndPoint}}/posts/1/comments"
+name: List Posts with Comments
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title":"Third Post"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_cef8015e6757430a98156e2757fccd05
+authentication: {}
+metaSortKey: -1657940954743.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

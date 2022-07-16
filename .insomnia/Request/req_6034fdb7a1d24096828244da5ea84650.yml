@@ -1,0 +1,21 @@
+_id: req_6034fdb7a1d24096828244da5ea84650
+type: Request
+parentId: fld_70060a887abe4d42b5f7f925d1ece236
+modified: 1657991860107
+created: 1657943117084
+url: "{{EndPoint}}/posts/af499d44-536e-4212-b87d-e9372ce5d66b/comments"
+name: List Comments by Post
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1657940954743.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
