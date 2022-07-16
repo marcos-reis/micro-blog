@@ -24,6 +24,8 @@ spec:
   selector:
     app: posts
   ports:
-  - port: 3000
-    targetPort: 3000
+  - name: posts
+    protocol: TCP
+    port: 3331
+    targetPort: 3331
         
