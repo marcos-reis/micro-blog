@@ -1,0 +1,29 @@
+_id: req_c3c9bfc7cf8742c892e3216297b6b8ca
+type: Request
+parentId: fld_4e9da04a8dce4f21afefaee5329e69f8
+modified: 1658001564442
+created: 1657940926496
+url: "{{EndPoint}}/posts/create"
+name: Create Post
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title":"Third Post"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_cef8015e6757430a98156e2757fccd05
+authentication: {}
+metaSortKey: -1657940954743.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
