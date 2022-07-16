@@ -17,3 +17,10 @@ spec:
             name: posts-srv
             port: 
               number: 3000
+      - pathType: Prefix
+        path: "/api/comments"
+        backend:
+          service:
+            name: comments-srv
+            port: 
+              number: 3001
