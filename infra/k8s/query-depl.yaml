@@ -1,29 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: comments-depl
+  name: query-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: comments
+      app: query
   template:
     metadata:
       labels:
-        app: comments
+        app: query
     spec:
       containers:
-      - name: comments
-        image: marcos205990/blog-comments
+      - name: query
+        image: marcos205990/blog-query
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: comments-srv
+  name: query-srv
 spec:
   selector:
-    app: comments
+    app: query
   ports:
-  - port: 3001
-    targetPort: 3001
+  - name: query
+    protocol: TCP
+    port: 3333
+    targetPort: 3333
         
