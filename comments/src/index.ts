@@ -2,7 +2,7 @@ import express from 'express'
 import {json} from 'body-parser'
 import {randomUUID} from 'crypto'
 import axios from 'axios'
-
+import cors, { CorsOptions } from 'cors'
 
 const app = express()
 
@@ -14,7 +14,12 @@ type CommentType = {
 
 const comments:CommentType[] = []
 
+const corsOptions:CorsOptions = {
+    origin:process.env.SERVER_ALLOW_ORIGIN || ""
+}
+
 app.use(json())
+app.use(cors(corsOptions))
 
 const eventBusServiceUrl = process.env.EVENT_BUS_SERVICE_URL || ""
 
@@ -32,7 +37,7 @@ app.post("/posts/:id/comments",(req, res)=>{
     .then(_=>console.log("Event CommentCreated sent successfully"))
     .catch(_=>console.log("Error sending event to EventBus"))    
 
-    res.send('')
+    res.status(201).send()
 })
 
 const port = process.env.SERVER_PORT

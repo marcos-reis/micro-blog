@@ -1,13 +1,21 @@
 import express from 'express'
 import {json} from 'body-parser'
+import cors, { CorsOptions } from 'cors'
+
 const app = express()
 
 type CommentType = { id:string, content:string}
 type PostType = { id:string, title:string, comments:CommentType[]}
 
-const posts:{[key:string]:PostType}={}
+const corsOptions:CorsOptions = {
+    origin:process.env.SERVER_ALLOW_ORIGIN || ""
+}
+
 
 app.use(json())
+app.use(cors(corsOptions))
+
+const posts:{[key:string]:PostType}={}
 
 app.post("/events",(req, res) => {
     const { type, data } = req.body
