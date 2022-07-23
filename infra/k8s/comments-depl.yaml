@@ -26,6 +26,6 @@ spec:
   ports:
     - name: comments
       protocol: TCP
-      port: 3332
-      targetPort: 3332
+      port: 3333
+      targetPort: 3333
           

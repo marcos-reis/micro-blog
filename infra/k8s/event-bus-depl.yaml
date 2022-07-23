@@ -26,6 +26,6 @@ spec:
   ports:
   - name: event-bus
     protocol: TCP
-    port: 3330
-    targetPort: 3330
+    port: 3333
+    targetPort: 3333
         

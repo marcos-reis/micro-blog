@@ -16,21 +16,21 @@ spec:
             service:
               name: event-bus-srv
               port: 
-                number: 3330
+                number: 3333
         - path: "/posts/create"
           pathType: Prefix
           backend:
             service:
               name: posts-srv
               port: 
-                number: 3331
+                number: 3333
         - path: "/posts/?(.*)/comments"
           pathType: Prefix
           backend:
             service:
               name: comments-srv
               port: 
-                number: 3332
+                number: 3333
         - path: "/posts"
           pathType: Prefix
           backend:
@@ -38,3 +38,10 @@ spec:
               name: query-srv
               port: 
                 number: 3333
+        - path: /?(.*)
+          pathType: Prefix
+          backend:
+            service:
+              name: client-srv
+              port: 
+                number: 3000
